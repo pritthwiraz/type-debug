@@ -73,7 +73,26 @@
                         within the curly brackets {}.</p>
                 </div>
             </div>
+            <div class="card container mt-4">
+                <div class="card-body">
+                    <h3 class="card-title  text-center">How does event loop works in JavaScript?
+                    </h3>
+                    <p class="card-text">JavaScript is a single-threaded language. In other words, it can do only one
+                        thing at a time.
+                        JavaScript executes all operations on a single thread, but using a few smart data structures,
+                        gives us the illusion of multi-threading. The event loop is the secret behind JavaScript’s
+                        asynchronous programming.</p>
+                    <p>The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. If the Call
+                        Stack is empty, the Event Loop will take the first event from the queue and will push it to the
+                        Call Stack, which effectively runs it.</p>
+                    <p>The event loop is a process that waits for the Call Stack to be clear before
+                        pushing callbacks from the Task Queue to the Call Stack. Once the Stack is clear, the event loop
+                        triggers and checks the Task Queue for available callbacks. If there are any, it pushes it to
+                        the Call Stack, waits for the Call Stack to be clear again, and repeats the same process.
+                    </p>
 
+                </div>
+            </div>
 
         </section>
     </main>
