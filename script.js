@@ -25,6 +25,7 @@ fetch("./texts.json")
 const typeController = (e) => {
   const newLetter = e.key;
 
+
   // Handle backspace press
   if (newLetter == "Backspace") {
     userText = userText.slice(0, userText.length - 1);
@@ -54,6 +55,7 @@ const typeController = (e) => {
   if (questionText === userText) {
     gameOver();
   }
+
 };
 
 const validate = (key) => {
@@ -63,6 +65,7 @@ const validate = (key) => {
   return false;
 };
 
+
 // FINISHED TYPING
 const gameOver = () => {
   document.removeEventListener("keydown", typeController);
@@ -70,7 +73,6 @@ const gameOver = () => {
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
   const timeTaken = Math.floor((finishTime - startTime) / 1000);
-
 
   // show result modal
   resultModal.innerHTML = "";
@@ -101,6 +103,7 @@ const closeModal = () => {
   modalBackground.classList.toggle("hidden");
   resultModal.classList.toggle("hidden");
 };
+
 
 const start = () => {
   // If already started, do not start again
